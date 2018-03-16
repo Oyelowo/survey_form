@@ -1,6 +1,54 @@
 <style>
-
-
+body{
+    background: lightcyan;
+}
+div.container{
+    background: white;
+    margin: auto;
+    max-width: 1000px;
+    height: auto;
+}
+#title, #description{
+    text-align: center;
+}
+#survey-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+}
+#personal{
+    grid-area: 1/1/3/3
+}
+/*#feedback-container{
+    grid-area: 3/1/6/3;
+}*/
+h4{
+    grid-area: 3/1/4/3
+}
+#feedback1{
+    grid-area: 5/1/6/2;
+}
+#feedback2{
+    grid-area: 5/2/6/3;
+}
+#feedback3{
+    grid-area: 7/1/8/2;
+}
+#feedback4{
+    grid-area: 7/2/8/3;
+}
+#feedback5{
+    grid-area: 9/1/10/2;
+}
+#feedback6{
+    grid-area: 9/2/10/3;
+}
+textarea{
+    grid-area: 13/1/14/3;
+}
+#submit{
+    grid-area: 14/1/15/3;
+}
 </style>
 
 
@@ -27,7 +75,7 @@
             <p id="description">Let us know how we can improve on the welcome Fair</p>
 
             
-                <form id="survey-form" action="https://www.facebook.com/groups/733512983334435/?fref=nf">
+                <form id="survey-form" action="#">
                     <div id="personal">
                             <fieldset>
                                 <legend>Personal details</legend>
@@ -72,9 +120,10 @@
 
                 
 
+                        
+                
                         <h4>Feedback</h4>
-                <div id="feedback-container">
-                    <div class="feedback">
+                    <div id="feedback1">
                         
                         <fieldset>
                             <legend> How helpful was the welcome fair? </legend>
@@ -89,40 +138,38 @@
                         </fieldset>
                     </div>
 
-                <div class="feedback">
-                    
-                        <fieldset>
-                            <legend> Do you like the package given? </legend>
-                            <input type="radio" id="yes" value="yes" name="package-quality">
+                <div id="feedback2">
+                    <fieldset>
+                        <legend> Do you like the package given? </legend>
+                        <input type="radio" id="yes" value="yes" name="package-quality">
+                        <label for="yes">Yes</label> <br>
+    
+                        <input type="radio" value="no" id="no" name="package-quality"> 
+                        <label for="no">No</label><br>
+                    </fieldset>
+                </div>
+                <div id="feedback3">
+                    <fieldset>
+                            <legend> Were the ambassadors approachable enough? </legend>
+                            <input type="radio" id="yes" value="yes" name="approachable">
                             <label for="yes">Yes</label> <br>
         
-                            <input type="radio" value="no" id="no" name="package-quality"> 
+                            <input type="radio" value="no" id="no" name="approachable"> 
                             <label for="no">No</label><br>
-                        </fieldset>
-
-                        <fieldset>
-                                <legend> Were the ambassadors approachable enough? </legend>
-                                <input type="radio" id="yes" value="yes" name="approachable">
-                                <label for="yes">Yes</label> <br>
-            
-                                <input type="radio" value="no" id="no" name="approachable"> 
-                                <label for="no">No</label><br>
-                        </fieldset>
-
-                        <fieldset>
-                                <legend> Movie ticket or Musuem ticket? </legend>
-                                <input type="radio" id="movie" value="movie" name="ticket">
-                                <label for="movie">Movie Ticket</label> <br>
-            
-                                <input type="radio" value="musuem" id="musuem" name="ticket"> 
-                                <label for="musuem">Musuem Ticket</label><br>
-                        </fieldset>
+                    </fieldset>
+                </div>
+                <div id=feedback4>
+                    <fieldset>
+                            <legend> Movie ticket or Musuem ticket? </legend>
+                            <input type="radio" id="movie" value="movie" name="ticket">
+                            <label for="movie">Movie Ticket</label> <br>
+        
+                            <input type="radio" value="musuem" id="musuem" name="ticket"> 
+                            <label for="musuem">Musuem Ticket</label><br>
+                    </fieldset>
                 </div>
 
-
-
-
-                <div>
+                <div id="feedback5">
                     <fieldset>
                         <legend>What did you like?</legend>
                         <input type="checkbox" value="chocolate-candy" name="chocolate-candy" id="package">
@@ -148,42 +195,38 @@
 
                         <input type="checkbox" value="ferry voucher" name="ferry voucher" id="package">
                         <label for="ferry-voucher">Ferry Voucher</label><br>
-
-
-                        
                     </fieldset>
-
+                </div>
+                <div id="feedback6">
                     <fieldset>
                         <legend>Which colours of the bags do like?</legend>
-                            <input type="checkbox" value="pink-bag" name="pink-bag" id="color">
-                            <label for="pink-bag">Pink bag</label><br>
-        
-                            <input type="checkbox" value="blue-bag" name="blue-bag" id="color">
-                            <label for="blue-bag">Blue bag</label><br>
-        
-                            <input type="checkbox" value="red-bag" name="red-bag" id="color">
-                            <label for="red-bag">Red bag</label><br>
-        
-                            <input type="checkbox" value="yellow-bag" name="yellow-bag" id="color">
-                            <label for="yellow-bag">Yellow bag</label><br>
-        
-                            <input type="checkbox" value="green-bag" name="green-bag" id="color">
-                            <label for="green-bag">Light green bag</label><br>
+                        <input type="checkbox" value="pink-bag" name="pink-bag" id="color">
+                        <label for="pink-bag">Pink bag</label><br>
+    
+                        <input type="checkbox" value="blue-bag" name="blue-bag" id="color">
+                        <label for="blue-bag">Blue bag</label><br>
+    
+                        <input type="checkbox" value="red-bag" name="red-bag" id="color">
+                        <label for="red-bag">Red bag</label><br>
+    
+                        <input type="checkbox" value="yellow-bag" name="yellow-bag" id="color">
+                        <label for="yellow-bag">Yellow bag</label><br>
+    
+                        <input type="checkbox" value="green-bag" name="green-bag" id="color">
+                        <label for="green-bag">Light green bag</label><br>
                     </fieldset>
                 </div>
             
-            </div>
+            
+        
                     
                     
 
                     <textarea name="additional-comment" id="additional-comment" cols="80" rows="5" placeholder="Write additional comment"></textarea> <br>
 
-                    <input type="submit" id="submit" name="submit">
+                    <div id="submit"><input type="submit" id="submit" name="submit"></div>
                 </form>
         </main>
-    </div>
-
-
-    
+    </div>  
 </body>
 </html>
