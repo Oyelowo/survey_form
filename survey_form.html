@@ -11,6 +11,8 @@ div.container{
 }
 #title, #description{
     text-align: center;
+    font-weight: bolder;
+    font-size: 23px;
 }
 #survey-form{
     display: grid;
@@ -24,7 +26,8 @@ div.container{
 #name-label, #email-label, #number-label, #gender-label, #degree-label{
     display: grid;
     max-width: 1000px;
-    grid-template-columns: 70px 7fr;
+    height: auto;
+    grid-template-columns: 80PX 7fr;
     grid-auto-rows: 50px;
     text-align: end;
     font-size: 18px;
@@ -32,7 +35,7 @@ div.container{
     font-variant:small-caps;
 }
 
-h4{
+h2{
     text-align: center;
     grid-area: 3/1/4/3;
     margin-bottom: -40px;
@@ -82,7 +85,7 @@ textarea{
     <div class="container" >
         <main>
             <header>
-                <h1 id="title">Survey Form</h1>
+                <h1 id="title">SURVEY FORM</h1>
             </header>
         
             <p id="description">Let us know how we can improve on the welcome Fair</p>
@@ -135,7 +138,7 @@ textarea{
 
                         
                 
-                        <h4>Feedback</h4>
+                        <h2>FEEDBACK</h2>
                 
                     <div id="feedback1">
                         
@@ -241,6 +244,9 @@ textarea{
                     <div id="submit"> <button type="submit">Submit Form</button> </div>
                 </form>
         </main>
+        <footer style="text-align:center;">
+                <p>Created by: <a  href="https://www.linkedin.com/in/oyelowo-oyedayo/" target="_blank">Oyelowo Oyedayo</a> </p>
+        </footer>
     </div>  
 </body>
 </html>
