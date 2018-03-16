@@ -3,6 +3,7 @@
         background: lightblue;
     }
     .container{
+        display: grid;
         max-width: 900px;
         background: white;
         margin: auto;
@@ -22,10 +23,10 @@
     form #feedback{
         margin-top: 10px;
     }
-    div.personal{
+    #personal{
         max-width: 900px;
     }
-    #name{
+    #name{ 
         display:grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 1fr 1fr ;
@@ -34,7 +35,6 @@
         grid-template-areas: 
         "firstname surname"
         "email date-of-birth"
-
         /*grid-gap:*/
     }
     #surname{
@@ -60,7 +60,7 @@
         grid-area: date-of-birth;
         width: 300px;
         height: 30px;
-    }
+    } -->
 
     /*#feedback{
         border: solid 1px black;
@@ -75,7 +75,7 @@
     }
     /*div.feedback:nth-of-type(2) fieldset*/
     div.feedback fieldset{
-        height: 78px;
+        height: auto;
     }
 
 
@@ -101,7 +101,7 @@
 
         <main>
             <form action="https://www.facebook.com/groups/733512983334435/?fref=nf">
-               <div class="personal">
+               <div id="personal">
                     <fieldset>
                         <legend>Personal details</legend>
                             <div  id="name">
