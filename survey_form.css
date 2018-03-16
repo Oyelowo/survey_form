@@ -1,0 +1,69 @@
+body{
+    background: url("https://github.com/Oyelowo/tribute_page_slessor/blob/master/img/45degreee_fabric.png?raw=true");
+}
+div.container{
+    background: white;
+    margin: auto;
+    padding:10px 40px 10px 40px;
+    max-width: 1000px;
+    height: auto;
+}
+#title, #description{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 23px;
+}
+#survey-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 15px 31px;
+}
+#personal{
+    grid-area: 1/1/3/3;
+}
+#name-profile{
+    display: grid;
+    max-width: 1000px;
+    height: auto;
+    grid-template-columns: 80PX 7fr;
+    grid-auto-rows: 50px;
+    text-align: end;
+    font-size: 18px;
+    font-weight: bolder;
+    font-variant:small-caps;
+}
+
+h2{
+    text-align: center;
+    grid-area: 3/1/4/3;
+    margin-bottom: -40px;
+}
+#feedback1{
+    grid-area: 5/1/6/2;
+}
+#feedback2{
+    grid-area: 5/2/6/3;
+}
+#feedback3{
+    grid-area: 7/1/8/2;
+}
+#feedback4{
+    grid-area: 7/2/8/3;
+}
+#feedback5{
+    grid-area: 9/1/10/2;
+}
+#feedback6{
+    grid-area: 9/2/10/3;
+}
+textarea{
+    margin: -57px 0px -10px 0px;
+    grid-area: 13/1/14/3;
+}
+#submit{
+    grid-area: 14/1/15/2;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}
