@@ -5,6 +5,7 @@ body{
 div.container{
     background: white;
     margin: auto;
+    padding:10px 40px 10px 40px;
     max-width: 1000px;
     height: auto;
 }
@@ -15,15 +16,26 @@ div.container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
+    grid-gap: 15px 31px;
 }
 #personal{
-    grid-area: 1/1/3/3
+    grid-area: 1/1/3/3;
 }
-/*#feedback-container{
-    grid-area: 3/1/6/3;
-}*/
+#name-label, #email-label, #number-label, #gender-label, #degree-label{
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: 70px 7fr;
+    grid-auto-rows: 50px;
+    text-align: end;
+    font-size: 18px;
+    font-weight: bolder;
+    font-variant:small-caps;
+}
+
 h4{
-    grid-area: 3/1/4/3
+    text-align: center;
+    grid-area: 3/1/4/3;
+    margin-bottom: -40px;
 }
 #feedback1{
     grid-area: 5/1/6/2;
@@ -44,6 +56,7 @@ h4{
     grid-area: 9/2/10/3;
 }
 textarea{
+    margin: -57px 0px -10px 0px;
     grid-area: 13/1/14/3;
 }
 #submit{
@@ -80,23 +93,23 @@ textarea{
                             <fieldset>
                                 <legend>Personal details</legend>
                     
-                                <div>
+                                <div id="name-label">
                                     <label for="name" id="name-label">name: </label>
-                                    <input type="text" name="name" id="name" placeholder="Firstname Lastname" required>    
+                                    <input type="text" name="name" id="name" placeholder="Firstname Lastname" required>   
                                 </div>
 
-                                <div>
+                                <div id="email-label">
                                     <label for="email" id="email-label">Email:</label>
                                     <input type="email" name="email" id="email" placeholder="Enter your Email" required>
                                 </div>
 
-                                <div>
+                                <div id="number-label">
                                     <label for="number" id="number-label">Number:</label>
                                     <input type="number" name="number" id="number" min="0" max="10" placeholder="rating">
                                 </div>
                                 
-                                <div>
-                                    <label for="gender">Gender:</label>
+                                <div id="gender-label">
+                                    <label for="gender" id="gender-label">Gender:</label>
                                     <select name="gender" id="dropdown">
                                         <option value="select" selected disabled hidden>select-gender</option>
                                         <option value="female">Female</option>
@@ -105,8 +118,8 @@ textarea{
                                     </select>
                                 </div>
 
-                                <div id="degree">
-                                    <label for="degree">Degree:</label>
+                                <div id="degree-label">
+                                    <label for="degree" id="degree-label">Degree:</label>
                                     <select name="degree" id="degree">
                                         <option value="select" selected disabled hidden>select-degree-level</option>
                                         <option value="bachelors">Bachelors</option>
@@ -123,6 +136,7 @@ textarea{
                         
                 
                         <h4>Feedback</h4>
+                
                     <div id="feedback1">
                         
                         <fieldset>
@@ -224,7 +238,7 @@ textarea{
 
                     <textarea name="additional-comment" id="additional-comment" cols="80" rows="5" placeholder="Write additional comment"></textarea> <br>
 
-                    <div id="submit"><input type="submit" id="submit" name="submit"></div>
+                    <div id="submit"> <button type="submit">Submit Form</button> </div>
                 </form>
         </main>
     </div>  
