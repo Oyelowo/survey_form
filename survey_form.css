@@ -67,3 +67,42 @@ textarea{
     height: 40px;
     font-size: 20px;
 }
+
+/* mobile version */
+@media(max-width: 768px){
+    body{
+        margin: 0;
+    }
+    #survey-form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #name-profile{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: start;
+    }
+
+    /* push the inputs up a bit */
+    #name-profile input, select{
+        position: relative;
+        top: -2em;
+    }
+
+    h2{
+        display: inline;
+    }
+
+    textarea{
+        margin-top: 0;
+    }
+
+    .feedback{
+        margin-bottom: 2em;
+        padding: 1.5em 0em;
+    }
+
+
+
+}
